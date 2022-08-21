@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="icon" type="image/x-icon" href="/images/alura-logo.svg">
+  <title>Codificador</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <img src="/images/alura-logo.svg" alt="Logo Alura">
+  </header>
+
+  <main>
+    <section class="input-box">
+      <textarea
+        class="text-input"
+        cols="40"
+        rows="6"
+        placeholder="Digite seu texto"
+      ></textarea>
+
+      </textarea>
+      <div class="footer">
+        <div class="observation">
+          <img src="/images/observation-icon.svg" alt="Ícone de obsevação">
+          <span class="information">Apenas letras minúsculas e sem acento.</span>
+        </div>
+  
+        <div class="buttons">
+          <button class="encrypt" onclick="btnEncrypt()">Criptografar</button>
+          <button class="decrypt" onclick="btnDecrypt()">Descriptografar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="message-box">
+      <div class="not-found-message-box">
+        <img class="not-found-image" src="images/not-found.png" alt="Ícone de nenhuma mensagem encontrada">
+        <h2 class="not-found-title">Nenhuma mensagem encontrada</h2>
+        <p class="not-found-message">Digite um texto que você deseja criptografar ou descriptografar.</p>
+      </div>
+
+      <div style="display: none;" class="found-message-box">
+        <p class="message"></p>
+        <div>
+          <button style="display: none;" class="copy" onclick="copy()">Copiar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
